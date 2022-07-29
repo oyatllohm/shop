@@ -1,0 +1,7 @@
+Django==3.2.8
+django-modeltranslation==0.18.2
+djangorestframework==3.12.4
+Pillow==8.1.2
+psycopg2-binary==2.9.2
+
+
