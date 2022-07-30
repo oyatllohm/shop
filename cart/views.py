@@ -31,7 +31,11 @@ class CartChangeView(View):
     def get(self,request):
         data_id = request.GET.get('data_id')         
         qty = request.GET.get('qty')
-        print(data_id)         
+        # print(data_id)
+        # print(data_id)
+        # print(data_id)
+        # print(qty)
         print(qty)
+        
         cart_product = CartProduct.objects.get(id=int(data_id))
         return JsonResponse({'status':200})         
