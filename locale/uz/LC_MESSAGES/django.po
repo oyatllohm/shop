@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-07-19 17:34+0500\n"
+"POT-Creation-Date: 2022-08-01 06:21+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,30 +18,50 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: shop/settings.py:205
+#: shop/settings.py:218
 msgid "English"
-msgstr ""
+msgstr "English"
 
-#: shop/settings.py:206
+#: shop/settings.py:219
 msgid "Russian"
-msgstr ""
+msgstr "Russian"
 
-#: shop/settings.py:207
+#: shop/settings.py:220
 msgid "Uzbek"
-msgstr ""
+msgstr "Uzbek"
 
-#: templates/index.html:39
+#: templates/cart.html:14
+msgid "Products"
+msgstr "Mahsulotlar"
+
+#: templates/cart.html:15
+msgid "Price"
+msgstr "Narxi"
+
+#: templates/cart.html:16
+msgid "Quantity"
+msgstr "Miqdori"
+
+#: templates/cart.html:17
+msgid "Total"
+msgstr "Jami"
+
+#: templates/cart.html:18
+msgid "Remove"
+msgstr "O'chirish"
+
+#: templates/wrapper.html:41
 msgid "About"
 msgstr "Biz xaqimizda"
 
-#: templates/index.html:40
+#: templates/wrapper.html:42
 msgid "Contact"
 msgstr "Aloqa"
 
-#: templates/index.html:41
+#: templates/wrapper.html:43
 msgid "Help"
 msgstr "Yordam"
 
-#: templates/index.html:42
+#: templates/wrapper.html:44
 msgid "FAQs"
 msgstr "FAQ"

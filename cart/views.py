@@ -29,13 +29,14 @@ class CartAddView(View):
 
 class CartChangeView(View):
     def get(self,request):
-        data_id = request.GET.get('data_id')         
-        qty = request.GET.get('qty')
-        # print(data_id)
-        # print(data_id)
-        # print(data_id)
-        # print(qty)
-        print(qty)
-        
-        cart_product = CartProduct.objects.get(id=int(data_id))
-        return JsonResponse({'status':200})         
+        data = GetCart(request).change()
+        return JsonResponse(data)
+    
+    
+class Delete_product(View):
+    def get(self,request):
+        data = GetCart(request)
+        d = data.delete()
+        return JsonResponse(d)
+    
+    

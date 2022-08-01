@@ -13,3 +13,11 @@ class HomeView(View):
         contest = {"big_banner":big_banner,"small_banners":small_banners}
         contest['products'] = products
         return render(request, "index.html",contest)
+    
+class ShopView(View):
+    def get(self,request):
+        return render(request=request, template_name='shop.html')
+    
+class ContactView(View):
+    def get(self,request):
+        return render(request=request, template_name='contact.html')

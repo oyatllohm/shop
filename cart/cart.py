@@ -46,3 +46,50 @@ class GetCart:
             return {"status":"ok","message":"The product added to  cart" , "cart_total_products":self.cart.products.count()}
 
 
+    def change(self):
+        data_id = self.request.GET.get('data_id')         
+        qty = self.request.GET.get('qty')
+        cart = self.cart
+  
+        cart_product = CartProduct.objects.get(id=int(data_id))
+        total_price = cart_product.product.price_rub * int(qty)
+   
+        if  cart.calculated_summa - cart_product.total_price < 0:
+            cart.calculated_summa = 0
+            cart.total_summa = 0
+        else:    
+            cart.calculated_summa -= cart_product.total_price
+            cart.total_summa -= cart_product.total_price
+        cart.save()
+
+        cart_product.total_price = total_price
+        cart_product.qty = int(qty)
+        cart_product.save()
+    
+        cart.calculated_summa += cart_product.total_price
+        cart.total_summa += cart_product.total_price
+        cart.save()
+
+        data = {
+            'status':200,
+            "total_price": cart_product.total_price ,
+            "calculated_summa":   cart.calculated_summa ,
+            "total_summa":   cart.total_summa ,
+        }
+        return data
+    
+    def delete(self):
+        data_id = self.request.GET.get('data_id')
+        obj = CartProduct.objects.get(id=int(data_id))
+        self.cart.calculated_summa -= obj.total_price          
+        self.cart.total_summa -= obj.total_price 
+        self.cart.save()
+        obj.delete()
+        data =  {  
+            'status':200,
+            "calculated_summa":   self.cart.calculated_summa ,
+            "total_summa":   self.cart.total_summa ,
+            "products_qty":self.cart.products.count(),
+        
+        } 
+        return data

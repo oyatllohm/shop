@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-07-19 17:34+0500\n"
+"POT-Creation-Date: 2022-08-01 06:21+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,34 +16,54 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
-"%100>=11 && n%100<=14)? 2 : 3);\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
+"(n%100>=11 && n%100<=14)? 2 : 3);\n"
 
-#: shop/settings.py:205
+#: shop/settings.py:218
 msgid "English"
-msgstr ""
+msgstr "English"
 
-#: shop/settings.py:206
+#: shop/settings.py:219
 msgid "Russian"
-msgstr ""
+msgstr "Russian"
 
-#: shop/settings.py:207
+#: shop/settings.py:220
 msgid "Uzbek"
-msgstr ""
+msgstr "Uzbek"
 
-#: templates/index.html:39
+#: templates/cart.html:14
+msgid "Products"
+msgstr "Товары"
+
+#: templates/cart.html:15
+msgid "Price"
+msgstr "Цена"
+
+#: templates/cart.html:16
+msgid "Quantity"
+msgstr "Количество"
+
+#: templates/cart.html:17
+msgid "Total"
+msgstr "Общий"
+
+#: templates/cart.html:18
+msgid "Remove"
+msgstr "Удалять"
+
+#: templates/wrapper.html:41
 msgid "About"
 msgstr "О нас"
 
-#: templates/index.html:40
+#: templates/wrapper.html:42
 msgid "Contact"
 msgstr "Контакт"
 
-#: templates/index.html:41
+#: templates/wrapper.html:43
 msgid "Help"
 msgstr "Помощь"
 
-#: templates/index.html:42
+#: templates/wrapper.html:44
 msgid "FAQs"
 msgstr "FAQ"
